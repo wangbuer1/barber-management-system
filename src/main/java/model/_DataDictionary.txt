@@ -1,0 +1,68 @@
+Table: customer
+----------+--------------+------+-----+---------+---------
+ Field    | Type         | Null | Key | Default | Remarks 
+----------+--------------+------+-----+---------+---------
+ id       | INT(10)      | NO   | PRI |         |         
+ name     | VARCHAR(255) | YES  |     |         |         
+ password | VARCHAR(255) | YES  |     |         |         
+ sex      | VARCHAR(255) | YES  |     |         |         
+ tel      | VARCHAR(255) | YES  |     |         |         
+ email    | VARCHAR(255) | YES  |     |         |         
+ address  | VARCHAR(255) | YES  |     |         |         
+----------+--------------+------+-----+---------+---------
+
+Table: manager
+----------+--------------+------+-----+---------+---------
+ Field    | Type         | Null | Key | Default | Remarks 
+----------+--------------+------+-----+---------+---------
+ id       | INT(10)      | NO   | PRI |         |         
+ name     | VARCHAR(255) | YES  |     |         |         
+ password | VARCHAR(255) | YES  |     |         |         
+ sex      | VARCHAR(255) | YES  |     |         |         
+ tel      | VARCHAR(255) | YES  |     |         |         
+ email    | VARCHAR(255) | YES  |     |         |         
+ address  | VARCHAR(255) | YES  |     |         |         
+----------+--------------+------+-----+---------+---------
+
+Table: recharge
+-------------+---------+------+-----+---------+---------
+ Field       | Type    | Null | Key | Default | Remarks 
+-------------+---------+------+-----+---------+---------
+ id          | INT(10) | NO   | PRI |         |         
+ customerId  | INT(10) | YES  |     |         |         
+ amountMoney | INT(10) | YES  |     |         |         
+-------------+---------+------+-----+---------+---------
+
+Table: staff
+---------+--------------+------+-----+---------+---------
+ Field   | Type         | Null | Key | Default | Remarks 
+---------+--------------+------+-----+---------+---------
+ id      | INT(10)      | NO   | PRI |         |         
+ name    | VARCHAR(255) | YES  |     |         |         
+ sex     | VARCHAR(255) | YES  |     |         |         
+ tel     | VARCHAR(255) | YES  |     |         |         
+ email   | VARCHAR(255) | YES  |     |         |         
+ address | VARCHAR(255) | YES  |     |         |         
+ skill   | VARCHAR(255) | YES  |     |         |         
+---------+--------------+------+-----+---------+---------
+
+Table: task
+------------+--------------+------+-----+---------+---------
+ Field      | Type         | Null | Key | Default | Remarks 
+------------+--------------+------+-----+---------+---------
+ id         | INT(10)      | NO   | PRI |         |         
+ customerId | INT(10)      | YES  |     |         |         
+ staffId    | INT(10)      | YES  |     | 0       |         
+ date       | DATETIME(19) | YES  |     |         |         
+ type       | VARCHAR(255) | YES  |     |         |         
+ status     | INT(10)      | YES  |     | 1       |         
+------------+--------------+------+-----+---------+---------
+
+Table: type
+-------+--------------+------+-----+---------+---------
+ Field | Type         | Null | Key | Default | Remarks 
+-------+--------------+------+-----+---------+---------
+ id    | INT(10)      | NO   | PRI |         |         
+ type  | VARCHAR(255) | YES  |     |         |         
+-------+--------------+------+-----+---------+---------
+
